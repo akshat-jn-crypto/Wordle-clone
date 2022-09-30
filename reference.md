@@ -1,0 +1,3 @@
+- Source: https://github.com/WebDevSimplified/wordle-clone
+- Modified CSS slightly to get it to fit in the output window.
+- Modifed JS logic to join targetWords + dictionary to form a list of all words - targetWords no longer need to be in the dictionary.
