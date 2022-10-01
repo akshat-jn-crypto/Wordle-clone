@@ -24,12 +24,12 @@
 
 2. Clone the forked repository.
 ```css
-git clone https://github.com/<your-github-username>/Hacktoberfest-2022
+git clone https://github.com/<your-github-username>/Wordle-clone
 ```
   
 3. Navigate to the project directory.
 ```py
-cd Hacktoberfest-2022
+cd Wordle-clone
 ```
 
 4. Create a new branch.
