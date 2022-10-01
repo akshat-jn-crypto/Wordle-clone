@@ -1,4 +1,5 @@
 const dictionary = [
+  "aabba"
   "aahed",
   "aalii",
   "aargh",
