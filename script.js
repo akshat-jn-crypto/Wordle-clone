@@ -1,13 +1,6 @@
 import targetWords from "./targetWords.js";
 import dictionary from "./dictionary.js";
 
-const username = prompt("Who are you?")
-const score = 0
-
-let leaderboard = JSON.parse(sessionStorage.getItem("leaderboard"))
-if(leaderboard==null)
-  leaderboard = new Array()
-
 const WORD_LENGTH = 5
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
@@ -23,7 +16,6 @@ const allWords = Array.from(new Set([...targetWords, ...dictionary]));
 startInteraction()
 
 function startInteraction() {
-  updateLeaderBoard()
   document.addEventListener("click", handleMouseClick)
   document.addEventListener("keydown", handleKeyPress)
 }
@@ -176,45 +168,8 @@ function shakeTiles(tiles) {
   })
 }
 
-function updateStorage(){
-  if(leaderboard.length==0)
-    leaderboard.push({username:username,score:score+10})
-  else{
-    let found = false
-    for(let i=0;i<leaderboard.length;i++){
-      if(leaderboard[i].username == username){
-        leaderboard[i].score += 10
-        found = true
-        break
-      }
-    }
-    if(!found)
-      leaderboard.push({username:username,score:score+10})
-  }
-  sessionStorage.setItem("leaderboard",JSON.stringify(leaderboard))
-}
-
-function updateLeaderBoard() {
-  if(leaderboard[0]!==undefined){
-  document.querySelector(".leaderboard tbody").innerHTML = 
-                                    `<tr>
-                                        <td>${leaderboard[0].username}</td>
-                                        <td>${leaderboard[0].score}</td>
-                                    </tr> `
-  for(let i = 1;i<leaderboard.length;i++){
-    document.querySelector(".leaderboard tbody").innerHTML += 
-                                    `<tr>
-                                        <td>${leaderboard[i].username}</td>
-                                        <td>${leaderboard[i].score}</td>
-                                    </tr> `
-    }
-  }
-}
-
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    updateStorage()
-    updateLeaderBoard()
     showAlert("You Win", 5000)
     danceTiles(tiles)
     stopInteraction()
