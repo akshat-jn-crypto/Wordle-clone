@@ -12970,7 +12970,9 @@ const dictionary = [
   "rower",
   "artsy",
   "rural",
-  "shave"
+  "shave",
+  "kkfskr",
+
 ];
 
 export default dictionary;
