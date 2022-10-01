@@ -1,4 +1,3 @@
-//we can precompile bits/stdc++.h to execute faster. YOu can watch youtube videos onhow does this works
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
