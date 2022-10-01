@@ -48,7 +48,7 @@ git commit -m "<your_commit_message>"
 
 7. Push your local commits to the remote repo.
 ```css
-git push -u origin <your_branch_name>
+git push -u origin "<your_branch_name>"
 ```
 
 8. Create a Pull Request.
