@@ -3,29 +3,16 @@
   font-family: Arial;
 }
 
-.wordleBody {
+body {
   background-color: hsl(240, 3%, 7%);
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  /* padding: 10em; */
+  padding: 10em;
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
 }
 
-.paddingDiv {
-  padding: 5em;
-}
-
-.paddingDiv1 {
-  padding: 3em;
-}
-
-.howToPlay {
-  color: white;
-  margin-left: 1rem;
-}
 .keyboard {
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1em));
@@ -53,6 +40,13 @@
   border-radius: .25em;
   cursor: pointer;
   user-select: none;
+}
+.key:hover{
+  background-color: hsl(
+    var(--hue, 198),
+    var(--saturation, 1%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 52%))
+  );
 }
 
 .key.large {
