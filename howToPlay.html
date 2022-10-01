@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>How To Play</title>
+  </head>
+  <body class="wordleBody">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Wordle</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Back To Wordle</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <div class="paddingDiv1"></div> -->
+    <div style="padding-top: 2em"></div>
+    <div class="row container-fluid text-center howToPlay">
+      <h2>Rules and FAQ's</h2>
+    </div>
+    <!-- *************************************************************** -->
+    <div class="container-fluid howToPlay">
+      <h2>
+        <ul type="disc">
+          <li>Rules</li>
+        </ul>
+      </h2>
+      <ul type="square">
+        <li>
+          Enter 5 letter words using the device keyboard or the onscreen
+          keyboard provided on the website.
+        </li>
+        <li>You will be given 6 tries to guess the hidden word.</li>
+        <li>
+          If the word that you have entered does not exist in the wordle's
+          dictionary, then it will not get accepted.
+        </li>
+        <li>
+          Each letter of the word that gets accepted will be coloured in either
+          <span style="color: hsl(115, 29%, 43%)">green</span>,
+          <span style="color: hsl(49, 51%, 47%)">yellow</span> or
+          <span style="color: hsl(240, 2%, 23%)">grey</span>.
+        </li>
+        <li>
+          If you are able to correcty guess the word within 6 tries, you win.
+        </li>
+      </ul>
+      <h2>
+        <ul type="disc">
+          <li><span style="color: hsl(115, 29%, 43%)">Green</span></li>
+        </ul>
+      </h2>
+      <ul type="square">
+        <li>
+          If a letter in the word that you entered is coloured
+          <span style="color: hsl(115, 29%, 43%)">green</span>, it means that in
+          the hidden word, this letter occurs in the same position.
+        </li>
+      </ul>
+      <h2>
+        <ul type="disc">
+          <li><span style="color: hsl(49, 51%, 47%)">Yellow</span></li>
+        </ul>
+      </h2>
+      <ul type="square">
+        <li>
+          If a letter in the word that you entered is coloured
+          <span style="color: hsl(49, 51%, 47%)">yellow</span>, it means that
+          this letter occurs in the hidden word but not in the same position.
+        </li>
+      </ul>
+      <h2>
+        <ul type="disc">
+          <li><span style="color: hsl(240, 2%, 23%)">Grey</span></li>
+        </ul>
+      </h2>
+      <ul type="square">
+        <li>
+          If a letter in the word that you entered is coloured
+          <span style="color: hsl(240, 2%, 23%)">grey</span>, it means that this
+          letter does not occur in the hidden word at all.
+        </li>
+      </ul>
+      <div class="paddingDiv1"></div>
+      <h2>
+        <ul type="disc">
+          <li>General FAQ</li>
+        </ul>
+      </h2>
+      <ul type="square">
+        <li>When to play?</li>
+        The hidden word in our wordle updates every day. You can visit us every
+        24 hours to play and find out the word of the day!
+        <div style="padding-top: 1em"></div>
+        <li>How many attempts do I get to guess the word?</li>
+        You get 6 attempts to correctly guess the hidden word. The fewer you take the better.
+        <div style="padding-top: 1em"></div>
+        <li>What does the green background on a letter mean?</li>
+        It means that letter occurs in the same position in the hidden word as well.
+        <div style="padding-top: 1em"></div>
+        <li>What does the yellow backgorund on a letter mean?</li>
+        It means that the letter occurs in the hidden word but not in the same position.
+        <div style="padding-top: 1em"></div>
+        <li>What does the grey background on a letter mean?</li>
+        It means that letter does not occur in the hidden word.
+        <div style="padding-top: 1em"></div>
+        <li>How to start a new game?</li>
+        Just click on the "Wordle" on the top left of your screen and enjoy your new game!
+      </ul>
+    </div>
+  </body>
+</html>
