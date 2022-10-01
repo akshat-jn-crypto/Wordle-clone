@@ -41,6 +41,13 @@ body {
   cursor: pointer;
   user-select: none;
 }
+.key:hover{
+  background-color: hsl(
+    var(--hue, 198),
+    var(--saturation, 1%),
+    calc(var(--lightness-offset, 0%) + var(--lightness, 52%))
+  );
+}
 
 .key.large {
   grid-column: span 3;
