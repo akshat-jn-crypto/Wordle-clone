@@ -1,19 +1,58 @@
 import targetWords from "./targetWords.js";
 import dictionary from "./dictionary.js";
 
-const WORD_LENGTH = 5
+let WORD_LENGTH=null ;
 const FLIP_ANIMATION_DURATION = 500
 const DANCE_ANIMATION_DURATION = 500
 const keyboard = document.querySelector("[data-keyboard]")
 const alertContainer = document.querySelector("[data-alert-container]")
 const guessGrid = document.querySelector("[data-guess-grid]")
-const offsetFromDate = new Date(2022, 0, 1)
-const msOffset = Date.now() - offsetFromDate
-const dayOffset = msOffset / 1000 / 60 / 60 / 24
-const targetWord = targetWords[Math.floor(dayOffset) % targetWords.length];
-const allWords = Array.from(new Set([...targetWords, ...dictionary]));
+let targetWord = null;
+const allWords = Array.from(new Set([...targetWords[0],,...targetWords[1],...targetWords[2],...dictionary]));
 
 startInteraction()
+
+
+
+
+let container=document.querySelector('.guess-grid');
+let tiles='';
+
+let levels=document.getElementsByClassName('level');
+let flag=0;
+
+Array.from(levels).forEach((e)=>{
+
+
+
+   e.addEventListener('click',()=>{
+  if(e.id==='1')setboxes(0,30,5,6);
+  else if(e.id==='2')setboxes(1,42,6,7)
+  else setboxes(2,56,7,8);
+})
+
+}
+
+
+)
+let setboxes=(index,level,col,row)=>{
+container.innerHTML=''
+targetWord =
+targetWords[index][Math.floor(Math.random() * targetWords[index].length)];
+console.log(targetWord)
+WORD_LENGTH=col
+container.style.gridTemplateColumns=`repeat(${col}, 2em)`
+  container.style.gridTemplateRows=`repeat(${row}, 2em)`;
+
+    for (let i = 0; i < level; ++i) {
+      let subcontainer = document.createElement("div");
+      subcontainer.className = "tile";
+      container.appendChild(subcontainer);
+    }
+}
+
+
+
 
 function startInteraction() {
   document.addEventListener("click", handleMouseClick)
@@ -78,10 +117,15 @@ function deleteKey() {
 }
 
 function submitGuess() {
-  const activeTiles = [...getActiveTiles()]
+  const activeTiles = [...getActiveTiles()];
+
+  
   if (activeTiles.length !== WORD_LENGTH) {
+  
     showAlert("Not enough letters")
+  
     shakeTiles(activeTiles)
+
     return
   }
 
@@ -89,14 +133,15 @@ function submitGuess() {
     return word + tile.dataset.letter
   }, "")
 
-  if (!allWords.includes(guess)) {
-    showAlert("Not in word list")
-    shakeTiles(activeTiles)
-    return
-  }
+  // if (!allWords.includes(guess)) {
+  //   showAlert("Not in word list")
+  //   shakeTiles(activeTiles)
+  //   return
+  // }
 
   stopInteraction()
   activeTiles.forEach((...params) => flipTile(...params, guess))
+  
 }
 
 function flipTile(tile, index, array, guess) {
