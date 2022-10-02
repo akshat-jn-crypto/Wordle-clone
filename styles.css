@@ -9,8 +9,18 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  padding: 10em;
+  padding: 3em 10em 10em 10em;
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.title {
+  color: hsl(204, 7%, 85%);
 }
 
 .keyboard {
@@ -211,4 +221,17 @@ body {
 
 .alert.hide {
   opacity: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+  color: white;
+}
+
+.footer a {
+  color: hsl(197, 59%, 64%);
+  text-decoration: none;
 }
