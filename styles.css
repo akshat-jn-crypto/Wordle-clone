@@ -9,9 +9,19 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  padding: 10em;
+  padding: 3em 10em 10em 10em;
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
   position: relative;
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.title {
+  color: hsl(204, 7%, 85%);
 }
 
 .levels{
@@ -200,7 +210,7 @@ cursor:pointer
 
 .alert-container {
   position: fixed;
-  top: 10vh;
+  top: 6vh;
   left: 50vw;
   transform: translateX(-50%);
   z-index: 1;
@@ -225,4 +235,28 @@ cursor:pointer
 
 .alert.hide {
   opacity: 0;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+  color: white;
+}
+
+.footer a {
+  color: hsl(197, 59%, 64%);
+  text-decoration: none;
+.new-game {
+  width: 10%;
+  margin: 5% auto 0;
+  padding: 8px;
+  transition: display 500ms ease-in-out;
+  background-color: hsl(115, 29%, 43%);
+}
+
+.new-game.hidden {
+  display: none;
 }
