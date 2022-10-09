@@ -11,6 +11,7 @@ body {
   margin: 0;
   padding: 3em 10em 10em 10em;
   font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+  position: relative;
 }
 .heading {
   display: flex;
@@ -23,6 +24,18 @@ body {
   color: hsl(204, 7%, 85%);
 }
 
+.levels{
+  position:absolute;
+left:1rem;
+top:2rem;
+}
+
+button{
+
+padding:.8rem;
+border-radius:4px;
+cursor:pointer
+}
 .keyboard {
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1em));
@@ -75,7 +88,9 @@ body {
 .key.wrong {
   --lightness: 23%;
 }
-
+.choose{
+  color:white
+}
 .key.wrong-location {
   --hue: 49;
   --saturation: 51%;
@@ -92,8 +107,7 @@ body {
   display: grid;
   justify-content: center;
   align-content: start;
-  grid-template-columns: repeat(5, 2em);
-  grid-template-rows: repeat(6, 2em);
+
   gap: .25em;
   margin-bottom: 1em;
 }
