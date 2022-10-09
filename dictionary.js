@@ -9886,6 +9886,7 @@ const dictionary = [
   "veeps",
   "veers",
   "veery",
+  "vegetable"
   "vegas",
   "veges",
   "vegie",
@@ -10117,6 +10118,7 @@ const dictionary = [
   "watap",
   "watts",
   "wauff",
+  "waste"
   "waugh",
   "wauks",
   "waulk",
