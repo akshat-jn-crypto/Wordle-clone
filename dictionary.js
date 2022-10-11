@@ -12970,7 +12970,14 @@ const dictionary = [
   "rower",
   "artsy",
   "rural",
-  "shave"
+  "shave",
+  "added",
+  "sweat",
+  "adopt",
+  "adore",
+  "adult",
+  "manish",
+  "madam"
 ];
 
 export default dictionary;
