@@ -33,7 +33,8 @@ const targetWords = [
   "resin",
   "rouse",
   "route",
-  "shade"
+  "shade",
+  "write"
 ];
 
 export default targetWords;
